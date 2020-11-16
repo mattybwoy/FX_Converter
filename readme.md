@@ -16,6 +16,9 @@ Creating a foreign exchange currency converter that connects to an API
 2. To run `node app` in terminal
 3. Navigate to localhost3000
 
+## Tech Stack
+Node, HTML, CSS, Javascript
+
 ## Collaborators
 mattybwoy
 
