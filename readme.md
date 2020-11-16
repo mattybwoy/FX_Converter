@@ -1,4 +1,6 @@
-## FX Currency Converter
+<h1 align="center">
+  FX Currency Converter
+</h1>
 
 ## Objective
 Creating a foreign exchange currency converter that connects to an API
