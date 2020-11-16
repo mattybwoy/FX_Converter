@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Currency Converter</title>
   <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="logo" href="./nodejs-logo.png" -->
 </head>
+
 <body>
   <div class = "container">
     <div class = "header">
       <h1>Currency Converter</h1>
     </div>
-    <div class="date">11-11-2020</div>
+    <div class="date"></div>
     <ul class="currencies">
     <li class="currency" id="USD">
 
@@ -40,6 +40,7 @@
   <script>
     const select = document.querySelectorAll('select')
     const input = document.querySelectorAll('input')
+    const date = document.querySelector('.date')
     
     const API_URL = "https://api.exchangeratesapi.io/latest"
     let html ='';
@@ -47,9 +48,12 @@
     async function currency(){
       const res = await fetch(API_URL)
       const data = await res.json();
+      const todayDate = data.date;
       const arrKeys = Object.keys(data.rates);
       const rates = data.rates;
- 
+      
+      date.innerHTML = todayDate.split("-").reverse().join("-")
+
       arrKeys.map(item =>{
         return html += `<option value ="${item}">${item}</option>`; 
       })
@@ -58,8 +62,9 @@
       } 
 
       function convert(a,b) {
-        input[a].value = input[b].value * rates[select[a].value] / rates[select[b].value]
+      input[a].value = input[b].value * rates[select[a].value] / rates[select[b].value]
       }
+
       input[0].addEventListener('keyup',() =>convert(1,0));
 
       input[1].addEventListener('keyup',() =>convert(0,1))
@@ -67,6 +72,7 @@
       select[0].addEventListener('change',() =>convert(1,0))
 
       select[1].addEventListener('change',() =>convert(0,1))
+
     }
     currency();
   </script>

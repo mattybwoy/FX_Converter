@@ -6,11 +6,13 @@
 Creating a foreign exchange currency converter that connects to an API
 
 ## Progress
- - Currency converter showing correct rates when input 
+ - Currency converter showing correct rates when input
+ - Current date provided from API
 
 ## Improvements
  - Testing
- Date representated by API
+ - Fixing convert button
+ - CSS
 
 ## Installation
 
