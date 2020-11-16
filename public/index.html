@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class = "container">
+    <div class = "header">
+      <h1>Currency Converter</h1>
+    </div>
+    <div class="date">11-11-2020</div>
+    <ul class="currencies">
+    <li class="currency" id="USD">
+      <!-- <img src="http://www.geonames.org/flags/l/us.gif" class="flag"> -->
+      <div class="info">
+        <select class="selector">
+        <p class="input"><input placeholder="0.000"></p>
+        </select>
+        <!-- <p class="currency-name">USD - US Dollar</p>
+        <p class="base-currency-rate">1 USD = 1 USD</p> -->
+      </div>
+    </li>
+    <li class="currency" id="JPY">
+      <!-- <img src="http://www.geonames.org/flags/l/jp.gif" class="flag"> -->
+      <div class="info">
+        <select class="selector">
+        <p class="input"><input placeholder="0.000"></p>
+        </select>
+        <!-- <p class="currency-name">JPY - Japanese Yen</p>
+        <p class="base-currency-rate">1 USD = 111.0401</p> -->
+      </div>
+    </li>
+    </ul>
+    <ul class="add-currency-list"></ul>
+    <button class="add-currency-button">Convert</button>
+  </div>
+  <script>
+    const select = document.querySelectorAll('select')
+    const input = document.querySelectorAll('input')
+    
+    const API_URL = "https://api.exchangeratesapi.io/latest"
+    let html ='';
+
+    async function currency(){
+      const res = await fetch(API_URL)
+      const data = await res.json();
+      const arrKeys = Object.keys(data.rates);
+      const rates = data.rates;
+ 
+      arrKeys.map(item =>{
+        return html += `<option value ="${item}">${item}</option>`; 
+      })
+      for(let i=0; i<select.length;i++) {
+        select[i].innerHTML = html;
+      } 
+
+      function convert(a,b) {
+        input[a].value = input[b].value * rates[select[a].value] / rates[select[b].value]
+      }
+      input[0].addEventListener('keyup',() =>convert(1,0));
+
+      input[1].addEventListener('keyup',() =>convert(0,1))
+
+      select[0].addEventListener('change',() =>convert(1,0))
+
+      select[1].addEventListener('change',() =>convert(0,1))
+    }
+    currency();
+  </script>
+</body>
+</html>
