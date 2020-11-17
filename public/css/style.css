@@ -18,7 +18,7 @@ body{
 }
 
 .header{
-  background-color: #2d2d37;
+  background-color: darkslategray;
   text-align: center;
   padding: 1.75rem
 }
@@ -35,7 +35,6 @@ body{
 }
 
 ul.currencies {
-  /* height: calc(100vh - 40px - 100px - 40px - 58px); */
   background-color: #222;
   padding: 0 1.5rem 1rem 1.5rem;
   overflow-y: auto;
@@ -56,13 +55,6 @@ ul.currencies li:last-child {
 
 ul.currencies li.base-currency {
   background-color: #264d73;
-}
-
-.flag {
-  width: 60px;
-  height: 40px;
-  border: 1px solid #fff;
-  vertical-align: top;
 }
 
 .info {
@@ -114,28 +106,9 @@ ul.currencies li .close:hover {
   color: #fff;
 }
 
-.add-currency-button {
-  background-color: #00b386;
-  color: #fff;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-top: 3px solid #222;
-  outline: none;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.25s;
-  position: relative;
-}
-
-.add-currency-button:hover {
-  background-color: darkgreen
-}
-
 select.selector{
   width: fit-content;
-  background-color: darkkhaki;
+  background-color: darkslategray;
   color: white;
   padding: 12px;
   font-size: 15px;
@@ -144,6 +117,19 @@ select.selector{
   border-radius: 0.5rem;
 }
 
+.select.selector::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
 
 input{
     font-size: 1.5rem;

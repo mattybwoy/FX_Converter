@@ -11,8 +11,10 @@ Creating a foreign exchange currency converter that connects to an API
 
 ## Improvements
  - Testing
- - Fixing convert button
  - CSS
+ - Dropdown menu (select)
+ - Margin between input and select
+
 
 ## Installation
 
