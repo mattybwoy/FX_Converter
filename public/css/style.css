@@ -141,6 +141,7 @@ input{
     padding: 0.3rem;
     margin-bottom: 0.75rem;
     display: inline-block;
+    margin-left: 1vw;
 }
 
 footer {

@@ -10,10 +10,9 @@ Creating a foreign exchange currency converter that connects to an API
  - Current date provided from API
 
 ## Improvements
- - Testing
+ - Mock API
  - CSS
  - Dropdown menu (select)
- - Margin between input and select
 
 
 ## Installation
