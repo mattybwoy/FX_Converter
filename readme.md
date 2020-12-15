@@ -9,9 +9,10 @@ Creating a foreign exchange currency converter that connects to an API
  - Currency converter showing correct rates when input
  - Current date provided from API
  - Mock API saved to response
+ - Mock API test not currently correctly testing API
 
 ## Improvements
- - Mock API
+ - Mock API 
  - CSS
  - Dropdown menu (select)
 
