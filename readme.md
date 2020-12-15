@@ -24,9 +24,8 @@ Creating a foreign exchange currency converter that connects to an API
 ## Tech Stack
 Node, HTML, CSS, Javascript
 
-## Testing
-Mocha/Chai<br>
-2 passing tests
+## Testing (Mocha/Chai)<br>
+2 pass
 
 ## Collaborators
 mattybwoy
