@@ -8,6 +8,7 @@ Creating a foreign exchange currency converter that connects to an API
 ## Progress
  - Currency converter showing correct rates when input
  - Current date provided from API
+ - Mock API saved to response
 
 ## Improvements
  - Mock API
@@ -24,8 +25,8 @@ Creating a foreign exchange currency converter that connects to an API
 ## Tech Stack
 Node, HTML, CSS, Javascript
 
-## Testing (Mocha/Chai)<br>
-2 pass
+## Testing (Mocha/Chai/Nock)<br>
+3 pass
 
 ## Collaborators
 mattybwoy

@@ -2,6 +2,8 @@ var expect  = require('chai').expect;
 var request = require('request');
 var server = require('../app');
 var chai = require ('chai'), chaiHttp = require('chai-http');
+const nock = require('nock')
+var mockResponse = require('./response');
 
 var url = 'http://localhost:3000'
 
@@ -20,4 +22,11 @@ it('Main page status', function(done) {
         done();
     });
   });
+})
+
+describe('Test API', () => {
+  beforeEach(() => {
+    nock('https://api.exchangeratesapi.io/latest')
+    .replyContentLength(200, mockResponse)
+  })
 })
