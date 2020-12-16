@@ -31,10 +31,8 @@ describe('Test API', () => {
   })
 
   it('displays rates', () => {
-    return(response => {
-      expect(typeof response).to.equal('object')
       expect(mockResponse.rates.CAD).to.equal(1.5473)
-      expect(mockResponse.date).to.equal("2020-12-16")
+      expect(mockResponse.date).to.equal("2020-12-15")
     })
   })
-})
+//})
