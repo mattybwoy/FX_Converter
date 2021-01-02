@@ -12,7 +12,6 @@ Creating a foreign exchange currency converter that connects to an API
  - API mocked in test
 
 ## Improvements
- - CSS
  - Dropdown menu (select)
 
 
@@ -22,8 +21,13 @@ Creating a foreign exchange currency converter that connects to an API
 2. To run `node app` in terminal
 3. Navigate to localhost3000
 
+## Screenshot
+![Image](./public/image1.png)
+<br>
+Currency conversion of GBP to HKD
+
 ## Tech Stack
-Node, HTML, CSS, Javascript
+HTML, CSS, Javascript, Node
 
 ## Testing (Mocha/Chai/Nock)<br>
 3 pass
